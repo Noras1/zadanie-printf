@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main() {
+
+ FILE *plik = fopen("plik.txt", "r");
+ int b, j, a;
+ float napis[50];
+ while(fscanf(plik, "%f %i %d", &napis[b], &j, &a)!=EOF)
+ {
+ 	printf("%.2f   %x  %04d\n", napis[b], j, a);
+ }
+ fclose(plik);
+  return 0;
+}
